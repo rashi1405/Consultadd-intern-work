@@ -1,0 +1,27 @@
+<%- include('header') -%>
+<link rel="stylesheet" href="/styles/home.css">
+<script src="https://kit.fontawesome.com/fd7e4b7ef5.js" crossorigin="anonymous"></script>
+
+<nav class="navbar fixed-top navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fas fa-gifts"></i>&nbsp;ClickNBuy</a>
+    <a class="float-right" href="/"><i class="fas fa-home"></i>Home</a>
+    <a href="/logout"><i class="fas fa-sign-out-alt"></i>Logout</a>
+  </div>
+</nav>
+
+
+<div style="padding: 3rem">
+    <% products.forEach(function(product){ %>
+        <div class="row column card">
+            <img style="width:50% " src="/images/<%= product.image %>"/>
+            <h4> <%= product.title %> </h4>
+            <details>
+            <summary>View Description</summary>
+            <p>M.R.P: <%= product.price %><br>Product Details: <%= product.description %><br></p>
+            </details>
+        </div>
+    <% }) %>
+</div>
+
+<%- include('footer') -%>

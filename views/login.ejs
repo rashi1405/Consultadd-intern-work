@@ -1,0 +1,41 @@
+<%- include('header') -%>
+<link rel="stylesheet" href="/styles/login.css">
+<script src="https://kit.fontawesome.com/fd7e4b7ef5.js" crossorigin="anonymous"></script>
+
+
+<nav class="navbar fixed-top navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><i class="fas fa-gifts"></i>&nbsp;ClickNBuy</a>
+  </div>
+</nav>
+
+<div class="text-center center-div" id="login">
+    <div class="container w-25 border py-5 border-secondary rounded shadow-lg p-4 mb-4 bg-white">
+        <div class="title">
+        <h1>Welcome To ClickNBuy</h1><br>
+            <div class="font-weight-bold head"><i class="fas fa-user"></i>&nbspUser Login</div><br>
+            <% if(locals.msg){%>
+                <div class="alert alert-secondary text-center">
+                    <%= msg %> 
+                </div>
+            <% } %>
+        </div>
+
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" name="email">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" placeholder="Password" name="password">
+            </div><br>
+            <button type="submit" class="btn btn-dark">Login&nbsp<i class="fas fa-sign-in-alt"></i></button>
+        </form>
+        <br>
+
+        <small>New to ClickNBuy?</small>
+        <div class="link" id="link"><a href="/signup">Create Account</div><br>
+   
+    </div>
+</div>
+
+<%- include('footer') -%>
