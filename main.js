@@ -31,8 +31,7 @@ var a = [{id: 1, title: "OnePlus", description: "Mobile", image: "1.jpg", stock:
 {id: 4, title: "DSLR", description: "Camera", image: "4.jpg", stock: 40, price: 50000},
 {id: 5, title: "AppleiPad", description: "Tablet", image: "5.jpg", stock: 60, price: 60000},
 {id: 6, title: "SanDisk", description: "Pendrive", image: "6.jpg", stock: 80, price: 1000},
-{id: 7, title: "Alexa", description: "SmartSpeaker", image: "7.jpg", stock: 20, price: 3000},
-{id: 8, title: "MacBook", description: "Laptop", image: "8.jpg", stock: 8, price: 80000}]
+{id: 7, title: "Alexa", description: "SmartSpeaker", image: "7.jpg", stock: 20, price: 3000}]
 
 fs.writeFile("./products.txt", JSON.stringify(a), function(err)
 {
@@ -175,7 +174,7 @@ const request = mailjet
   "Messages":[
     {
       "From": {
-        "Email": "rashi1405jaiswal@gmail.com",
+        "Email": "samyakkhabiya123@gmail.com",
         "Name": "Rashi"
       },
       "To": [
@@ -186,7 +185,7 @@ const request = mailjet
       ],
       "Subject": "Greetings from ClickNBuy.",
       "TextPart": "My first Mailjet email",
-      "HTMLPart": "<h3>Dear "+customerName+", <br>Welcome to ClickNBuy ! <br>You're just one click away from completing the sign-up process.<br><a href='https://ecommerce43.herokuapp.com/verify_account?verification_key="+key+"'>Verify your account is done</a></h3><br />Happy Shopping at ClickNBuy :)<br>Regards<br>Rashi Jaiswal",
+      "HTMLPart": "<h3>Dear "+customerName+", <br>Welcome to ClickNBuy ! <br>You're just one click away from completing the sign-up process.<br><a href='https://ecommerce43.herokuapp.com/verify_account?verification_key="+key+"'>Your account is verified </a></h3><br />Happy Shopping at ClickNBuy :)<br>Regards<br>Rashi Jaiswal",
       "CustomID": "AppGettingStartedTest"
     }
   ]
